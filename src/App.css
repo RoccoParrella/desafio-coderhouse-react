@@ -1,5 +1,46 @@
 .App {
   text-align: center;
+  
+}
+
+.nombrePais{
+  font-size: 1.5rem;
+}
+
+.buttons {
+  background-color: white;
+  border: none;
+}
+
+.buttonBuy {
+  background-color: violet;
+  border: none;
+  margin: 15px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: .2s;
+  color: white;
+}
+
+.buttonBuy:hover {
+  color: black;
+  background-color: turquoise;
+}
+
+.carritoImg{
+  width: 25px;
+  padding-top: 7px;
+}
+
+.card {
+  width: 12rem;
+  text-align: center;
+  margin: 20px;
+}
+
+.divMain{
+  display: flex;
+  margin: 20px;
 }
 
 .App-logo {
