@@ -9,7 +9,7 @@ const Item = ({ id, name, price, stock }) => {
             <p className="card-text">${price}</p>
             <p className="card-text">Stock: {stock}</p>
             <ItemCount max={stock} />
-            <Link className="buttonBuy" to={`/item/${id}`}>Info</Link>
+            <Link className="buttonBuy" style={{textDecoration: "none"}} to={`/item/${id}`}>Info</Link>
         </div>
     </div>
     );

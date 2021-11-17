@@ -3,22 +3,21 @@ import { Link } from 'react-router-dom';
 
 const ItemDetail = ({ item }) => {
 
-    // const onAdd = (qty) => {
-    //     alert("You have selected " + qty + " items.");
-    // }
-
     return (
         <>
             {
-                item.name
+                item && item.img
                     ?
-                    <div>
-                        <h1>{item.name}</h1>
-                        <p>{item.description}</p>
-                        <p>$ {item.price}</p>
-                        <p>Stock Online: {item.stock}</p>
-                        <ItemCount max={item.stock} />
-                        <Link className="buttonBuy" to={`/`}>Volver</Link>
+                    <div className="container d-flex justify-content-center">
+                        <div className="text-center">
+                            <h1>{item.name}</h1>
+                            <img src={item.img} />
+                            <h3>{item.description}</h3>
+                            <h3>$ {item.price}</h3>
+                            <h4>Stock Online: {item.stock}</h4>
+                            <ItemCount max={item.stock} />
+                            <Link className="buttonBuy" to={`/`}>Volver</Link>
+                        </div>
                     </div>
                     : <h2>Cargando...</h2>
             }

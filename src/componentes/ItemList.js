@@ -2,8 +2,6 @@ import '../App.css';
 import Item from './Item';
 
 const ItemList = ({ item }) => {
-
-    console.log(item);
     
         return (
             <>

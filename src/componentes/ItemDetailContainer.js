@@ -6,10 +6,10 @@ const { products } = require('../utils/Products');
 
 const ItemDetailContainer = () => {
     const [data, setDato] = useState({});
-    const { idItem } = useParams();
+    const { id } = useParams();
 
     useEffect(() => {
-        productsPromise(2000, products.find(item => item.id === parseInt(idItem)))
+        productsPromise(2000, products.find(item => item.id === parseInt(id)))
             .then(result => setDato(result))
             .catch(err => console.log(err))
     }, []);

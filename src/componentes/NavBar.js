@@ -16,13 +16,16 @@ function NavBar() {
               <a className="nav-link active" aria-current="page" href="/">Home</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Shop</a>
+              <a className="nav-link" href="/category/10">Remeras</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Nueva Temporada</a>
+              <a className="nav-link" href="/category/20">Pantalones</a>
             </li>
             <li className="nav-item">
-              <CardWidget/>
+              <a className="nav-link" href="/category/30">Camperas</a>
+            </li>
+            <li className="nav-item">
+              <CardWidget />
             </li>
           </ul>
         </div>
@@ -30,6 +33,5 @@ function NavBar() {
     </nav>
   );
 }
-
 
 export default NavBar;
