@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import CardWidget from './CardWidget';
+import CartWidget from './CartWidget';
 
 
 function NavBar() {
@@ -25,7 +25,9 @@ function NavBar() {
               <a className="nav-link" href="/category/30">Camperas</a>
             </li>
             <li className="nav-item">
-              <CardWidget />
+              <a href="/cart">
+              <CartWidget />
+              </a>
             </li>
           </ul>
         </div>

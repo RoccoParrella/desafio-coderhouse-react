@@ -1,12 +1,12 @@
 import { useState } from "react";
 import '../App.css';
 
-const ItemCount = (props) => {
+const ItemCount = ({stock = 0, onAdd}) => {
 
     const [valoraciones, setValoraciones] = useState(1);
 
     const increment = () => {
-        if (valoraciones < props.max) {
+        if (valoraciones < stock) {
             setValoraciones(valoraciones+1);
         }
     }
@@ -17,6 +17,7 @@ const ItemCount = (props) => {
         }
     }
 
+    
     return (
         <div>
             <div className="divButtons">
@@ -24,7 +25,7 @@ const ItemCount = (props) => {
             {valoraciones}
             <button className="buttons" onClick={increment}>+</button>
             </div>
-            <button className="buttonBuy">Comprar</button>
+            <button onClick={() => onAdd(valoraciones)} className="buttonBuy">Comprar</button>
         </div>
     )
 
