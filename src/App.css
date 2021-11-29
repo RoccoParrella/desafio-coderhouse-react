@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap');
+
+
 .App {
-  text-align: center;
-  
+  text-align: center; 
 }
 
 .nombrePais{
@@ -43,37 +45,96 @@
   margin: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-cart{
+  margin: 20px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.second-cart{
+  margin: 20px 0;
+  border: 1px solid black; 
+  height: 350px;
+  border-radius: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.card-item{
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+.img-cart {
+  height: 200px;
+}
+
+.pedido {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 2.3rem;
+  margin-bottom: 0rem;
+  color: rgb(36, 36, 36);
+}
+
+.separacion {
+  background-color: rgb(36, 36, 36);
+  height: 100%;
+  width: 2px;
+  height: auto;
+  margin: 0 10px;
+}
+
+.pedido-2{
+  margin-bottom: 0rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+}
+
+.pedido-3{
+  margin-bottom: 0rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+}
+
+.pedido-4 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  margin-top: 15px;
+
+  
+}
+
+.widget-count{
+  position: absolute;
+  background-color: red;
+  border-radius: 50%;
+  font-size: 0.8rem;
   color: white;
+  margin-bottom: -1rem;
+  padding: 0px 6px;
+  margin-left: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.button-cart{
+  background-color: rgb(36, 36, 36);
+  border: none;
+  padding: 8px 10px;
+  border-radius: 20px;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  margin-left: 5px;
+  transition: 0.3s;
+  border: 1px solid rgb(36, 36, 36);
+  }
+
+  .button-cart:hover{
+    transform: skew(0deg, -5deg);
+    background-color: white;
+    color: rgb(36, 36, 36);
+    
+  }
+
+.tu-compra{
+  margin-top: 70px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.finally-cart{
+  padding: 20px;
 }

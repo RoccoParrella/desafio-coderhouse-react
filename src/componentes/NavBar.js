@@ -1,4 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from 'react-router-dom';
 import CartWidget from './CartWidget';
 
 
@@ -6,28 +7,26 @@ function NavBar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
-        <a className="navbar-brand" href="/">PaellaShop</a>
+        <Link className="navbar-brand" to="/">PaellaShop</Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul className="navbar-nav ">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/">Home</a>
+              <Link className="nav-link active" aria-current="page" to="/">Home</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/category/10">Remeras</a>
+              <Link className="nav-link" to="/category/10">Remeras</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/category/20">Pantalones</a>
+              <Link className="nav-link" to="/category/20">Pantalones</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/category/30">Camperas</a>
+              <Link className="nav-link" to="/category/30">Camperas</Link>
             </li>
             <li className="nav-item">
-              <a href="/cart">
-              <CartWidget />
-              </a>
+              <Link to="/cart"><CartWidget /></Link>
             </li>
           </ul>
         </div>

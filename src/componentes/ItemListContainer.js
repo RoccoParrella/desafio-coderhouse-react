@@ -8,21 +8,33 @@ const { products } = require ('../utils/Products')
 const ItemListContainer = () => {
     const [datos, setDatos] = useState([]);
     const { category } = useParams();
+    const [loader, setLoader] = useState(true);
 
     useEffect(() => {
-        productsPromise(2000, products.filter(item => {
+        setLoader(true);
+        productsPromise(500, products.filter(item => {
             if (category === undefined) return item;
             return item.category === parseInt(category)
         }))
             .then(result => setDatos(result))
             .catch(err => console.log(err))
-    }, [datos]);
+            .finally(() => setLoader(false))
+    }, [category]);
 
-    return (
-        <>  
-            <ItemList item={datos} />
-        </>
-    );
+
+    return loader ? (
+        <div className="loading">
+            <div className="d-flex justify-content-center">
+                <div className="spinner-grow text-secondary" role="status">
+                </div>
+            </div>
+            <h1 className="textLoading">Loading...</h1>
+        </div >
+    ) : ( 
+    <>
+    <ItemList item={datos} /> 
+    </>);
+    
 }
 
 export default ItemListContainer;
