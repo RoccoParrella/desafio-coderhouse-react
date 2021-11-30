@@ -17,13 +17,13 @@ function NavBar() {
               <Link className="nav-link active" aria-current="page" to="/">Home</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/category/10">Remeras</Link>
+              <Link className="nav-link" to="/category/Fj1tpvdEgZ85AMvSNyTf">Remeras</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/category/20">Pantalones</Link>
+              <Link className="nav-link" to="/category/S3k3SjVDtpQ2S4arpniQ">Pantalones</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/category/30">Camperas</Link>
+              <Link className="nav-link" to="/category/ardtHfVKMBYplHb2aCyQ">Camperas</Link>
             </li>
             <li className="nav-item">
               <Link to="/cart"><CartWidget /></Link>

@@ -35,7 +35,7 @@ const ItemDetail = ({ item }) => {
                             <Link style={{textDecoration: "none"}} className="buttonBuy" to={`/`}>Volver</Link>
                         </div>
                     </div>
-                    : <h2>Cargando...</h2>
+                    : <></>
             }
         </>
     );
