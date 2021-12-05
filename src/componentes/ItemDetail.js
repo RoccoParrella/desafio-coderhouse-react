@@ -18,23 +18,28 @@ const ItemDetail = ({ item }) => {
             {
                 item && item.img
                     ?
-                    <div className="container d-flex justify-content-center">
-                        <div className="text-center">
-                            <h1>{item.id}</h1>
-                            <h1>{item.marca}</h1>
-                            <h1>{item.name}</h1>
-                            <img src={item.img} alt=" " />
-                            <h3>{item.description}</h3>
-                            <h3>$ {item.price}</h3>
-                            <h4>Stock Online: {item.stock}</h4>
-                            {
-                            count === 0
-                            ? <ItemCount stock={item.stock} onAdd={onAdd}/>
-                            : <Link to='/cart' style={{textDecoration: "none"}}><button className="buttonBuy">CheckOut</button></Link>
-                            }
-                            <Link style={{textDecoration: "none"}} className="buttonBuy" to={`/`}>Volver</Link>
+                    <>
+                        <div className="container d-flex justify-content-around detail-main">
+                            <div >
+                                <img className="img-detail" src={item.img} alt={item.name} />
+                            </div>
+                            <div className="hola">
+                                <p className="detail-p-1">{item.marca}</p>
+                                <p className="detail-p">{item.name}</p>
+                                <p className="detail-p">{item.description}</p>
+                                <p className="detail-p">Stock: {item.stock} Unidades</p>
+                                <p className="detail-p">$ {item.price}</p>
+                                <div className="d-flex align-items-end">
+                                {
+                                    count === 0
+                                        ? <ItemCount stock={item.stock} onAdd={onAdd} />
+                                        : <Link to='/cart' style={{ textDecoration: "none" }}><button className="button-detail">CheckOut</button></Link>
+                                }
+                                <Link style={{ textDecoration: "none" }} className="button-detail" id="detail" to={`/`}>Seguir comprando</Link>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </>
                     : <></>
             }
         </>

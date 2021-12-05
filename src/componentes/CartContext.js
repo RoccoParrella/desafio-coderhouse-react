@@ -21,6 +21,7 @@ const CartContextProvider = ({ children }) => {
             ])}
         else {
             same.itemQty += qty;
+            setCart([...cartList]);
         }
     };
 
