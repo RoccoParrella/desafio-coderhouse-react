@@ -35,7 +35,6 @@ const Cart = () => {
                 stock: increment(-item.itemQty)
             });
         });
-
         test.removeCartList();
     }
 
@@ -73,7 +72,7 @@ const Cart = () => {
                 </div>
             </div>
 
-            <div className="d-flex justify-content-between">
+            <div className="d-flex justify-content-between cart-margin">
                 <div className="col-8">
                     {
                         test.cartList.length > 0 &&
@@ -101,7 +100,7 @@ const Cart = () => {
 
                 {
                     test.cartList.length > 0 &&
-                    <div className="col-3 d-flex flex-column align-items-center second-cart finally-cart">
+                    <div className="col-3 d-flex flex-column align-items-around justify-content-around second-cart">
                         <p className="text-center pedido">TU COMPRA</p>
                         <div className="d-flex tu-compra justify-content-around">
                             <div>
@@ -110,7 +109,7 @@ const Cart = () => {
                                 <p className="letter-3">Total:</p>
                             </div>
                             <div>
-                                <p className="letter">${test.calculateSubTotalPrice()}</p>
+                                <p className="letter text-end">${test.calculateSubTotalPrice()}</p>
                                 <p className="letter">${test.calculateTax()}</p>
                                 <p className="letter-3">${test.calculateTotalPrice()}</p>
                             </div>

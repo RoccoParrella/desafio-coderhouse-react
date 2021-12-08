@@ -18,12 +18,10 @@ const ItemDetailContainer = () => {
     return loader ? (
         <div className="loading">
             <div className="d-flex justify-content-center">
-                <div className="spinner-grow text-secondary" role="status">
-                </div>
+                <div className="spinner-grow text-secondary" role="status"></div>
             </div>
-            <h1 className="textLoading">Loading...</h1>
         </div >
-        
+
     ) : (<ItemDetail item={data[0]} />);
 }
 

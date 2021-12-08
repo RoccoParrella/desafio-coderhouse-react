@@ -19,13 +19,12 @@ const ItemDetail = ({ item }) => {
                 item && item.img
                     ?
                     <>
-                        <div className="container d-flex justify-content-around detail-main">
+                        <div className="container d-flex justify-content-around align-items-center detail-main">
                             <div >
                                 <img className="img-detail" src={item.img} alt={item.name} />
                             </div>
                             <div className="hola">
-                                <p className="detail-p-1">{item.marca}</p>
-                                <p className="detail-p">{item.name}</p>
+                                <p className="detail-p-1">{item.name}</p>
                                 <p className="detail-p">{item.description}</p>
                                 <p className="detail-p">Stock: {item.stock} Unidades</p>
                                 <p className="detail-p">$ {item.price}</p>

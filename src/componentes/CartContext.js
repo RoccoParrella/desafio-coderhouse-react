@@ -80,9 +80,7 @@ const CartContextProvider = ({ children }) => {
             calculateTotalQty,
             calculateSubTotalPrice,
             calculateTax,
-            calculateTotalPrice
-
-        }}>
+            calculateTotalPrice}}>
             {children}
         </CartContext.Provider>
     );
