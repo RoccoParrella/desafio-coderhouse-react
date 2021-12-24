@@ -5,7 +5,7 @@ nav{
   width: 100%;
   left: 0;
   top: 0;
-  position: relative;
+  position: sticky;
   padding: 10px;
 }
 
@@ -23,8 +23,6 @@ nav{
   list-style: none;
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
-  
-  
 }
 
 .link-navbar{
@@ -39,6 +37,10 @@ nav{
 
 .nombrePais{
   font-size: 1.5rem;
+}
+
+.NavBar{
+  z-index: 1000000;
 }
 
 .buttons {
@@ -86,14 +88,15 @@ nav{
 .divMain{
   display: flex;
   justify-content: center;
-  margin-top: 40px;
+
 }
 
 .div-main-list {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1440px;
+  width: 100%;
+  overflow: hidden;
   flex-direction: column;
 }
 
@@ -101,6 +104,7 @@ nav{
   background-color: rgb(37, 37, 37);
   width: 820px;
   margin-top: 10px;
+  border-radius: 10px;
 }
 
 #category-p{
@@ -172,7 +176,8 @@ nav{
 .pedido-4 {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
-  margin-top: 15px;
+  
+  margin: auto;
 }
 
 .widget-count{
@@ -277,6 +282,15 @@ nav{
   padding: 50px;
   border-radius: 40px;
   transition: .3s;
+  margin-top: 150px;
+  width: auto;
+}
+
+.carrito{
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .loading {
@@ -303,10 +317,10 @@ nav{
   line-height: 35px;
   color: rgb(59, 59, 59);
 }
-
+/* 
 .hola{
   width: 500px;
-}
+} */
 
 .button-detail{
   border: none;
@@ -332,5 +346,106 @@ nav{
 
 .cart-margin{
   margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
+.cien{
+  width: 1700px;
+  height: 100%;
+}
+
+.loading {
+  margin-top: 280px;
+  margin-bottom: 100000px;
+}
+
+#navbar-semi{
+  display: flex;
+  justify-content: space-around;
+}
+
+#nonee{
+  text-decoration: none;
+}
+
+.img-card{
+  margin-bottom: 5px;
+}
+
+.card-title{
+  margin-bottom: 0;
+}
+
+@media only screen and (max-width: 875px) {
+
+.cien{
+  width: 100vh;
+}
+
+.limit{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: auto;
+}
+
+.carrito{
+  display: flex;
+  flex-direction: column;
+}
+
+.button-cart{
+  margin-top: 10px;
+}
+
+.pedido{
+  font-size: 30px;
+}
+
+}
+
+@media only screen and (max-width: 998px) {
+  .cart-margin{
+    flex-direction: column;
+  }
+
+  .img-detail{
+    overflow: hidden;
+  }
+
+  .detail-main{
+    flex-direction: column;
+    margin-top: 5px;
+    box-shadow: none;
+  }
+  .detail-main:hover{
+    box-shadow: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .card-item{
+    flex-direction: column;
+  }
+
+  .img-detail{
+    height: 300px;
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+
+  #navbar-semi{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .category-navbar{
+    margin: 20px 0 5px 0
+  }
+
+  }

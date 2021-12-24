@@ -5,7 +5,7 @@ import CartWidget from './CartWidget';
 function NavBar() {
   return (
     <nav className="">
-      <div className="d-flex justify-content-around navbar-semi">
+      <div id='navbar-semi' className=" ">
         <div>
           <Link to="/">
             <svg xmlns="http://www.w3.org/2000/svg" fill="white" className="bi bi-apple" viewBox="0 0 16 16">

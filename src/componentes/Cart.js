@@ -42,7 +42,7 @@ const Cart = () => {
     return (
 
         <div className="d-flex flex-column container">
-            <div className="d-flex justify-content-between align-items-center">
+            <div className="carrito">
                 <div className="d-flex">
                     {test.cartList.length > 0
                         ? <><p className="text-center pedido">TU PEDIDO</p>
@@ -72,8 +72,8 @@ const Cart = () => {
                 </div>
             </div>
 
-            <div className="d-flex justify-content-between cart-margin">
-                <div className="col-8">
+            <div className="cart-margin">
+                <div className="col-lg-8 col-md-12">
                     {
                         test.cartList.length > 0 &&
                         test.cartList.map(produc =>
@@ -85,12 +85,12 @@ const Cart = () => {
                                     <div>
                                         <p className="letter-2">{produc.itemMarca}</p>
                                         <p className="letter">{produc.itemName}</p>
-                                        <p className="letter">${produc.itemPrice} por prenda</p>
+                                        <p className="letter">${produc.itemPrice} por unidad</p>
                                         <p className="letter">Unidades: {produc.itemQty}</p>
                                     </div>
                                     <div className="d-flex flex-column align-items-center">
                                         <p className="text-center letter-2">${test.calculateTotalItems(produc.itemPrice, produc.itemQty)}</p>
-                                        <img src="https://icon-library.com/images/trash-can-icon-black-and-white/trash-can-icon-black-and-white-20.jpg" className="logo-tacho" onClick={() => test.deleteItem(produc.itemId)} />
+                                        <img alt="tacho de basura" src="https://icon-library.com/images/trash-can-icon-black-and-white/trash-can-icon-black-and-white-20.jpg" className="logo-tacho" onClick={() => test.deleteItem(produc.itemId)} />
                                     </div>
                                 </div>
                             </div>
@@ -100,7 +100,7 @@ const Cart = () => {
 
                 {
                     test.cartList.length > 0 &&
-                    <div className="col-3 d-flex flex-column align-items-around justify-content-around second-cart">
+                    <div className="col-lg-3 col-md-12 d-flex flex-column align-items-around justify-content-around second-cart">
                         <p className="text-center pedido">TU COMPRA</p>
                         <div className="d-flex tu-compra justify-content-around">
                             <div>
