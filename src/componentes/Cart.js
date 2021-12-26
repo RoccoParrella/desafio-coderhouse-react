@@ -10,7 +10,7 @@ const Cart = () => {
 
     const createOrder = () => {
         let order = {
-            buyer: { nombre: "Juan", apellido: "Perez", email: "Messi@gmail.com" },
+            buyer: { nombre: "Rocco", apellido: "Parrella", email: "roccoparrella@gmail.com" },
             items: test.cartList.map(item => ({
                 id: item.itemId,
                 title: item.itemName,
@@ -26,7 +26,7 @@ const Cart = () => {
         }
 
         createOrderInFirestore()
-            .then(result => alert(result.id))
+            .then(result => alert("Gracias por comprar en Apple, su codigo de compra es: " + result.id))
             .catch(error => alert(error));
 
         test.cartList.forEach(async(item) => {
